@@ -1,0 +1,33 @@
+<script setup lang="ts">
+// Footer component logic can be added here if needed
+</script>
+
+<template>
+  <footer class="bg-blue-primary text-white py-8 w-full">
+    <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+      <!-- Left Column -->
+      <div class="justify-self-center">
+        <div>
+          <h3 class="text-lg font-bold mb-4">KM Servis</h3>
+          <p class="text-sm">Obrt za instalacije, montažu, održavanje i kućne popravke</p>
+        </div>
+        <br />
+        <div>
+          <p>+385912345678</p>
+          <p>email@firma.com</p>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="justify-self-center">
+        <br />
+        <ul class="text-sm space-y-2">
+          <li><a href="#" class="hover:underline">O nama</a></li>
+          <li><a href="#" class="hover:underline">Usluge</a></li>
+          <li><a href="#" class="hover:underline">Kontakt</a></li>
+          <li><a href="#" class="hover:underline">Galerija</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</template>
