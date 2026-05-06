@@ -4,7 +4,7 @@
 
 <template>
   <footer class="bg-blue-primary text-white py-8 w-full">
-    <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+    <div class="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 px-4">
       <!-- Left Column -->
       <div class="justify-self-center text-center lg:text-left">
         <div>

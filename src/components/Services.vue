@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import ACBrands from './ACBrands.vue'
+
 // Add component logic here
 </script>
 
@@ -24,9 +26,10 @@
         class="w-auto h-auto max-h-[300px] mt-4 shadow-md justify-self-start"
       />
     </div>
+    <ACBrands class="md:col-span-2" />
     <div class="text-blue-dark grid gap-36 md:grid-cols-2 items-center justify-center px-36 py-16">
       <img
-        src="/src/assets/ACSTOCK.jpg"
+        src="/src/assets/montaža.webp"
         alt="Service Image"
         class="w-auto h-auto max-h-[300px] mt-4 shadow-md justify-self-end"
       />
@@ -57,7 +60,7 @@
         </p>
       </div>
       <img
-        src="/src/assets/ACSTOCK.jpg"
+        src="/src/assets/vodoinstalater.webp"
         alt="Service Image"
         class="w-auto max-h-[300px] h-auto mt-4 shadow-md justify-self-start"
       />

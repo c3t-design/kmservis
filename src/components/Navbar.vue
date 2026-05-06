@@ -14,7 +14,7 @@ import { RouterLink } from 'vue-router'
       <RouterLink to="/" class="p-4">O nama</RouterLink>
       <RouterLink to="/gallery" class="p-4">Galerija</RouterLink>
       <div class="rounded-lg bg-orange-primary p-4">
-        <router-link to="#contact">Kontakt</router-link>
+        <RouterLink to="/contact">Kontakt</RouterLink>
       </div>
     </nav>
   </header>
