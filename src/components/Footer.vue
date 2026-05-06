@@ -8,7 +8,7 @@
       <!-- Left Column -->
       <div class="justify-self-center">
         <div>
-          <h3 class="text-lg font-bold mb-4">KM Servis</h3>
+          <h3 class="text-lg font-bold mb-4">KM SERVIS</h3>
           <p class="text-sm">Obrt za instalacije, montažu, održavanje i kućne popravke</p>
         </div>
         <br />
@@ -22,10 +22,10 @@
       <div class="justify-self-center">
         <br />
         <ul class="text-sm space-y-2">
-          <li><a href="#" class="hover:underline">O nama</a></li>
-          <li><a href="#" class="hover:underline">Usluge</a></li>
-          <li><a href="#" class="hover:underline">Kontakt</a></li>
-          <li><a href="#" class="hover:underline">Galerija</a></li>
+          <li><router-link to="/" class="hover:underline">O nama</router-link></li>
+          <li><router-link to="#services-section" class="hover:underline">Usluge</router-link></li>
+          <li><router-link to="/contact" class="hover:underline">Kontakt</router-link></li>
+          <li><router-link to="/gallery" class="hover:underline">Galerija</router-link></li>
         </ul>
       </div>
     </div>

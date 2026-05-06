@@ -12,9 +12,9 @@ import { RouterLink } from 'vue-router'
     </div>
     <nav class="text-xl text-white justify-self-end flex gap-8 self-center pr-8">
       <RouterLink to="/" class="p-4">O nama</RouterLink>
-      <RouterLink to="/services" class="p-4">Galerija</RouterLink>
+      <RouterLink to="/gallery" class="p-4">Galerija</RouterLink>
       <div class="rounded-lg bg-orange-primary p-4">
-        <RouterLink to="/contact">Kontakt</RouterLink>
+        <router-link to="#contact">Kontakt</router-link>
       </div>
     </nav>
   </header>
