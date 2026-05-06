@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="bg-blue-primary text-center py-4">
+  <div class="hidden lg:block bg-blue-primary text-center py-4">
     <h1 class="text-orange-primary text-3xl pt-4 font-bold">
       Pročitajte komentare naših klijenata
     </h1>

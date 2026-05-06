@@ -41,7 +41,7 @@ const handleSubmit = async (event: Event) => {
 </script>
 
 <template>
-  <div class="contact px-4 py-36 md:px-8" id="contact">
+  <div class="contact px-4 py-16 lg:py-36 md:px-8" id="contact">
     <div class="text-blue-dark text-center flex items-center justify-center">
       <!--md:grid-cols-2-->
       <div>
