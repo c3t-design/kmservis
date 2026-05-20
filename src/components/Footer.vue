@@ -22,7 +22,6 @@
         <br />
         <ul class="text-sm space-y-2">
           <li><router-link to="/" class="hover:underline">O nama</router-link></li>
-          <li><router-link to="#services-section" class="hover:underline">Usluge</router-link></li>
           <li><router-link to="/contact" class="hover:underline">Kontakt</router-link></li>
           <li><router-link to="/gallery" class="hover:underline">Galerija</router-link></li>
         </ul>

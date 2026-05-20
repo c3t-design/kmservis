@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, watch } from 'vue'
 
 const slides = ref<Array<HTMLElement | null>>([])
 const slideContainer = ref<HTMLElement | null>(null)
-const currentIndex = ref(0)
+const imageIndex = ref(0)
+const disabledNext = ref(false)
+const disabledPrevious = ref(true)
 
 const images = [
   {
@@ -11,7 +13,7 @@ const images = [
     alt: 'AC stock image',
     text: 'Servis i montaža klima uređaja',
   },
-  { src: './src/assets/montaža.webp', alt: 'Montaža', text: 'Montaža namještaja i kućni popravci' },
+  { src: './src/assets/montaža.webp', alt: 'Montaža', text: 'Kućni popravci i montaža namještaja' },
   {
     src: './src/assets/vodoinstalater.webp',
     alt: 'Review stock',
@@ -23,26 +25,34 @@ const scrollToSlide = (index: number) => {
   const slide = slides.value[index]
   const container = slideContainer.value
   if (!slide || !container) return
-  currentIndex.value = index
+  imageIndex.value = index
   const slideWidth = slide.offsetWidth
   const slideLeft = slide.offsetLeft
   container.scrollLeft = slideLeft - (container.offsetWidth - slideWidth) / 2
 }
 
 const prevSlide = () => {
-  console.log('Previous button clicked')
-  if (currentIndex.value <= 0) return
-  scrollToSlide(currentIndex.value - 1)
+  if (imageIndex.value <= 0) {
+    console.log(imageIndex.value)
+    return
+  }
+  scrollToSlide(imageIndex.value - 1)
 }
 
 const nextSlide = () => {
-  console.log('Next button clicked')
-  if (currentIndex.value >= images.length - 1) return
-  scrollToSlide(currentIndex.value + 1)
+  if (imageIndex.value >= images.length - 1) {
+    return
+  }
+  scrollToSlide(imageIndex.value + 1)
 }
 
 onMounted(() => {
-  scrollToSlide(currentIndex.value)
+  scrollToSlide(imageIndex.value)
+})
+
+watch(imageIndex, (newIndex) => {
+  disabledPrevious.value = newIndex <= 0
+  disabledNext.value = newIndex >= images.length - 1
 })
 </script>
 
@@ -82,7 +92,9 @@ onMounted(() => {
         <button
           type="button"
           @click="prevSlide"
-          class="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-none text-orange-primary p-3 text-5xl font-bold transition hover:bg-white"
+          :disabled="disabledPrevious"
+          class="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-none text-orange-primary/25 p-2 pb-3 sm:p-3 sm:pb-6 text-5xl sm:text-[100px] font-bold transition"
+          :class="{ 'hover:bg-blue-primary text-orange-primary!': !disabledPrevious }"
           aria-label="Previous slide"
         >
           &#x2039;
@@ -91,7 +103,9 @@ onMounted(() => {
         <button
           type="button"
           @click="nextSlide"
-          class="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-none text-orange-primary p-3 text-5xl font-bold transition hover:bg-white"
+          :disabled="disabledNext"
+          class="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-none text-orange-primary/25 p-2 pb-3 sm:p-3 sm:pb-6 text-5xl sm:text-[100px] font-bold transition"
+          :class="{ 'hover:bg-blue-primary text-orange-primary!': !disabledNext }"
           aria-label="Next slide"
         >
           &#x203A;

@@ -10,7 +10,7 @@ import Services from '@/components/Services.vue'
   <main>
     <Landing />
     <Services />
-    <MobileHomeMessage class="lg:hidden" />
+    <MobileHomeMessage class="hidden" />
     <Review />
     <Contact />
   </main>

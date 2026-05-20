@@ -16,9 +16,9 @@ import { RouterLink } from 'vue-router'
       >
         <RouterLink to="/" class="p-4">O nama</RouterLink>
         <RouterLink to="/gallery" class="p-4">Galerija</RouterLink>
-        <div class="rounded-lg bg-orange-primary p-4">
+        <button class="rounded-lg bg-orange-primary p-4">
           <RouterLink to="/contact">Kontakt</RouterLink>
-        </div>
+        </button>
       </nav>
     </header>
   </div>
