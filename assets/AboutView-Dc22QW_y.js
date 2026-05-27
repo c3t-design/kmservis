@@ -1,0 +1,1 @@
+import{_ as e,f as t,o as n}from"./_plugin-vue_export-helper-BqhLm_4Y.js";import{a as r}from"./index-Od7fnTPC.js";var i=t({__name:`AboutView`,setup(t){return(t,i)=>(e(),n(r))}});export{i as default};
