@@ -10,7 +10,7 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "format": "prettier --write --experimental-cli src/",
-    "predeploy": "yarn run build",
+    "predeploy": "yarn run build && touch dist/.nojekyll",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
