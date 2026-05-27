@@ -36,9 +36,9 @@ import ACBrands from './ACBrands.vue'
       <div class="justify-self-start max-w-lg order-first sm:order-none">
         <h1 class="text-3xl font-bold px-8 pb-2">KUĆNI POPRAVCI I MONTAŽA NAMJEŠTAJA</h1>
         <p class="px-8 text-lg">
-          Rješavamo sitne kvarove i preinake koje vaš dom čine ugodnijim i praktičnijim. Radimo
-          kućne popravke, od popravaka vrata, ormara i polica do sastavljanja novog namještaja,
-          osiguravajući da vaš prostor bude funkcionalan i estetski privlačan.
+          Rješavamo sitne kvarove i radimo preinake koje vaš dom čine ugodnijim i praktičnijim.
+          Radimo kućne popravke, od popravaka vrata, ormara i polica do sastavljanja novog
+          namještaja, osiguravajući da vaš prostor bude funkcionalan i estetski privlačan.
         </p>
       </div>
     </div>
